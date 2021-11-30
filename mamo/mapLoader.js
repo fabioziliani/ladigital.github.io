@@ -49,7 +49,7 @@
 			return undefined
 
 		return jQuery('<div>').append(
-			jQuery(oh3).sibilings().first().cloneNode(), //a
+			jQuery(oh3).siblings().first().cloneNode(), //a
 			jQuery(oh3).clone(), //h3
 			jQuery(oh3).next().cloneNode() //description
 		)[0]
@@ -79,12 +79,16 @@
 
 		try {
 			popupContent = findContent(p.h3)
+			if (popupContent == null) {
+				console.error('Contenuto non trovato per', p.h3, p.name)
+				popupContent = p.name
+			}
 			console.log(popupContent)
 			//TODO aprire popup
 		}
 		catch (err) {
+			console.error(err)
 			popupContent = p.name
-			console.error('Contenuto non trovato per', p.h3, p.name)
 		}
 
 
@@ -153,7 +157,7 @@
 		{ h3: "COLLE DELL’ASSIETTA", "name": "Colle dell'Assietta", "lat": 45.070402858291686, "lng": 6.95702767490749 },
 		{ h3: "COLLE DEL SOMMEILLER", "name": "Colle del Sommeiller", "lat": 45.13563469802622, "lng": 6.846677558547623 },
 		{ h3: "VIA DEL SALE", "name": "Via del Sale", "lat": 44.14956851189366, "lng": 7.561840203233174 },
-		{ h3: "COLLE DELL’ASSIETTA", "name": "Monferrato-Langhe", "lat": 44.96289640650412, "lng": 8.305690513796987 },
+		{ h3: "MONFERRATO-LANGHE", "name": "Monferrato-Langhe", "lat": 44.96289640650412, "lng": 8.305690513796987 },
 		{ h3: "STELVIO - CANCANO - VAL MORA", "name": "Stelvio - Cancano - Val Mora", "lat": 46.5295654112248, "lng": 10.453644626845582 },
 		{ h3: "ALTOPIANO DEI LESSINI", "name": "Altopiano dei Lessini", "lat": 45.68604434380629, "lng": 11.082089782776155 },
 		{ h3: "PASUBIO", "name": "Pasubio", "lat": 45.77703674516535, "lng": 11.237686138030503 },
@@ -242,7 +246,7 @@
 	}
 
 
-	console.log('mapFabio v4')
+	console.log('mapFabio v5')
 
 
 })();
