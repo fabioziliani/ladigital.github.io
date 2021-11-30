@@ -162,11 +162,11 @@
 		{ h3: "ALTOPIANO DEI LESSINI", "name": "Altopiano dei Lessini", "lat": 45.68604434380629, "lng": 11.082089782776155 },
 		{ h3: "PASUBIO", "name": "Pasubio", "lat": 45.77703674516535, "lng": 11.237686138030503 },
 		{ h3: "ALTOPIANO DEI LESSINI", "name": "Altopiano di Asiago", "lat": 45.80432913098119, "lng": 11.535367879903378 },
-		{ h3: "VALSUGANA - CIMA D’ASTE", "name": "Valsugana - Cima D' Aste", "lat": 46.17140955976914, "lng": 11.601940472340068 },
-		{ h3: "MONTE PENNA - AVETO", "name": "Monte Penna - Aveto", "lat": 44.48665018236158, "lng": 9.495676623628848 },
+		{ h3: "VALSUGANA- CIMA D’ASTE", "name": "Valsugana - Cima D' Aste", "lat": 46.17140955976914, "lng": 11.601940472340068 },
+		{ h3: "MONTE PENNA- AVETO", "name": "Monte Penna - Aveto", "lat": 44.48665018236158, "lng": 9.495676623628848 },
 		{ h3: "MONTE CUSNA", "name": "Monte Cusna", "lat": 44.246147089220244, "lng": 10.425967323344276 },
 		//		{ "name": "Parma", "lat": 44.79527913699855, "lng": 10.098414994852149 },
-		{ h3: "TREMALZO - NOTA", "name": "Tremalzo - Nota", "lat": 45.83464535444968, "lng": 10.720700574243322 },
+		{ h3: "TREMALZO- NOTA", "name": "Tremalzo - Nota", "lat": 45.83464535444968, "lng": 10.720700574243322 },
 		{ h3: "CHIANTI", "name": "CHIANTI", "lat": 43.46463051673579, "lng": 11.315571900273701 },
 		{ h3: "ARGENTARIO", "name": "ARGENTARIO", "lat": 42.40153615850624, "lng": 11.15907193689943 },
 		{ h3: "MONTE SIBILLINI", "name": "Monti sibillini", "lat": 42.825687261988605, "lng": 13.206290601051721 }
@@ -246,7 +246,7 @@
 	}
 
 
-	console.log('mapFabio v6')
+	console.log('mapFabio v7')
 
 
 })();
