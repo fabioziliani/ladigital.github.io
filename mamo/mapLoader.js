@@ -49,9 +49,9 @@
 			return undefined
 
 		return jQuery('<div>').append(
-			jQuery(oh3).siblings().first().cloneNode(), //a
+			jQuery(oh3).siblings().first().clone(), //a
 			jQuery(oh3).clone(), //h3
-			jQuery(oh3).next().cloneNode() //description
+			jQuery(oh3).next().clone() //description
 		)[0]
 	}
 
@@ -246,7 +246,7 @@
 	}
 
 
-	console.log('mapFabio v5')
+	console.log('mapFabio v6')
 
 
 })();
