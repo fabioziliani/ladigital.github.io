@@ -52,7 +52,7 @@
 			jQuery(oh3).siblings().first().clone(), //a
 			jQuery(oh3).clone(), //h3
 			jQuery(oh3).next().clone() //description
-		)[0]
+		).html()
 	}
 
 	function doPoint(p, map) {
@@ -83,7 +83,6 @@
 				console.error('Contenuto non trovato per', p.h3, p.name)
 				popupContent = p.name
 			}
-			console.log(popupContent)
 			//TODO aprire popup
 		}
 		catch (err) {
@@ -246,7 +245,7 @@
 	}
 
 
-	console.log('mapFabio v7')
+	console.log('mapFabio v8')
 
 
 })();
