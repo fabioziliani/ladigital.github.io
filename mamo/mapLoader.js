@@ -35,7 +35,7 @@
 	}
 
 
-	function findContentInPage(query) {
+	function findH3InPage(query) {
 		var trovati = jQuery('#routes [data-tag] h3')
 		for (i = 0; i < trovati.length; i++)
 			if (trovati[i].innerText.toLowerCase() == query.toLowerCase()) {
@@ -44,8 +44,15 @@
 	}
 
 	function findContent(query) {
-		var content = findContentInPage(query)
-		return content.cloneNode(true)
+		var oh3 = findH3InPage(query)
+		if (oh3 == null)
+			return undefined
+
+		return jQuery('<div>').append(
+			jQuery(oh3).sibilings().first().cloneNode(), //a
+			jQuery(oh3).clone(), //h3
+			jQuery(oh3).next().cloneNode() //description
+		)[0]
 	}
 
 	function doPoint(p, map) {
@@ -140,7 +147,7 @@
 
 	window.navigateTo = navigateTo
 
-	
+
 
 	const punti = [
 		{ h3: "COLLE DELL’ASSIETTA", "name": "Colle dell'Assietta", "lat": 45.070402858291686, "lng": 6.95702767490749 },
@@ -154,7 +161,7 @@
 		{ h2: "VALSUGANA - CIMA D’ASTE", "name": "Valsugana - Cima D' Aste", "lat": 46.17140955976914, "lng": 11.601940472340068 },
 		{ h2: "MONTE PENNA - AVETO", "name": "Monte Penna - Aveto", "lat": 44.48665018236158, "lng": 9.495676623628848 },
 		{ h2: "MONTE CUSNA", "name": "Monte Cusna", "lat": 44.246147089220244, "lng": 10.425967323344276 },
-//		{ "name": "Parma", "lat": 44.79527913699855, "lng": 10.098414994852149 },
+		//		{ "name": "Parma", "lat": 44.79527913699855, "lng": 10.098414994852149 },
 		{ h2: "TREMALZO - NOTA", "name": "Tremalzo - Nota", "lat": 45.83464535444968, "lng": 10.720700574243322 },
 		{ h2: "CHIANTI", "name": "CHIANTI", "lat": 43.46463051673579, "lng": 11.315571900273701 },
 		{ h2: "ARGENTARIO", "name": "ARGENTARIO", "lat": 42.40153615850624, "lng": 11.15907193689943 },
